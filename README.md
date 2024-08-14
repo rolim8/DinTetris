@@ -27,3 +27,22 @@ DinTetris é uma versão personalizada do clássico jogo Tetris, desenvolvido us
 - **HTML5:** Estrutura básica e marcação do jogo.
 - **CSS3:** Estilização da interface e layout do jogo.
 - **JavaScript:** Lógica do jogo, manipulação de canvas e controle da pontuação.
+
+## Jogue Agora
+
+Você pode jogar DinTetris diretamente em [GitHub Pages](https://rolim8.github.io/DinTetris/).
+
+## Contribuições
+
+Contribuições são bem-vindas! Se você quiser melhorar o jogo ou corrigir problemas, por favor, faça um fork do repositório e envie um pull request com suas alterações.
+
+## Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
+
+## Contato
+
+Se você tiver alguma dúvida ou sugestão, sinta-se à vontade para entrar em contato:
+
+- **Email:** seu.email@dominio.com
+- **GitHub:** [rolim8](https://github.com/rolim8)
