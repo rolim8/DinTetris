@@ -3,19 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DinTetris</title>
+    <title>Tetris</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="shortcut icon" href="icon.png" />
+    <link rel="shortcut icon" href="imgs/icon.png" />
   </head>
   <body>
     <div class="container">
       <div class="header">
-        <h1>Din's Tetris</h1>
+        <h1>Tetris</h1>
         <button id="pauseButton">⏸️ Pause</button>
         <button id="restartButton">🔄 Restart</button>
       </div>
       <canvas id="gameCanvas"></canvas>
-      <script src="script.js"></script>
+      <div id="scoreContainer"></div>
+      <div id="mobileControls">
+        <button id="leftButton">⬅️</button>
+        <button id="rightButton">➡️</button>
+        <button id="downButton" onkeypress="descecomtudo()">⬇️</button>
+        <button id="rotateButton">🔄</button>
+      </div>
     </div>
+
+    <script src="scripts/config.js"></script>
+    <script src="scripts/piece.js"></script>
+    <script src="scripts/game.js"></script>
   </body>
 </html>
