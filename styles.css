@@ -45,5 +45,5 @@ body {
 canvas {
   border: 2px solid #fff;
   width: auto; /* Aumentado para melhorar a área do jogo */
-  height: 700px; /* Aumentado para melhorar a área do jogo */
+  height: 650px; /* Aumentado para melhorar a área do jogo */
 }
