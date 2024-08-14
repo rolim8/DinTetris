@@ -17,24 +17,24 @@ body {
 
 .header {
   display: flex;
-  align-items: center;
-  margin-bottom: 10px;
+  align-items: center; /* Coloca os itens na mesma linha */
+  margin-bottom: 1px;
 }
 
 .header h1 {
-  margin-right: 20px;
-  font-size: 36px;
+  margin-right: 20px; /* Espaçamento entre o título e os botões */
+  font-size: 20px; /* Aumentado para melhorar a visibilidade */
 }
 
 #pauseButton,
 #restartButton {
-  font-size: 20px;
-  padding: 5px 10px;
+  font-size: 14px; /* Reduzido para um tamanho menor */
+  padding: 4px 8px; /* Ajustado para um tamanho menor */
   border: none;
   background-color: #444;
   color: white;
   cursor: pointer;
-  margin-left: 10px;
+  margin-left: 10px; /* Margem para separar os botões */
 }
 
 #pauseButton:hover,
@@ -44,4 +44,6 @@ body {
 
 canvas {
   border: 2px solid #fff;
+  width: auto; /* Aumentado para melhorar a área do jogo */
+  height: 500px; /* Aumentado para melhorar a área do jogo */
 }
