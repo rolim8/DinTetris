@@ -30,7 +30,7 @@ DinTetris é uma versão personalizada do clássico jogo Tetris, desenvolvido us
 
 ## Jogue Agora
 
-Você pode jogar DinTetris diretamente em [GitHub Pages](https://rolim8.github.io/DinTetris/).
+Você pode jogar DinTetris diretamente em [Din's Tetris](https://rolim8.github.io/DinTetris/).
 
 ## Contribuições
 
@@ -44,5 +44,5 @@ Este projeto está licenciado sob a [MIT License](LICENSE).
 
 Se você tiver alguma dúvida ou sugestão, sinta-se à vontade para entrar em contato:
 
-- **Email:** seu.email@dominio.com
+- **Email:** rolimorlando@gmail.com
 - **GitHub:** [rolim8](https://github.com/rolim8)
