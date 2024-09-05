@@ -36,10 +36,6 @@ Você pode jogar DinTetris diretamente em [Din's Tetris](https://rolim8.github.i
 
 Contribuições são bem-vindas! Se você quiser melhorar o jogo ou corrigir problemas, por favor, faça um fork do repositório e envie um pull request com suas alterações.
 
-## Licença
-
-Este projeto está licenciado sob a [MIT License](LICENSE).
-
 ## Contato
 
 Se você tiver alguma dúvida ou sugestão, sinta-se à vontade para entrar em contato:
