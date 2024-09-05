@@ -10,7 +10,7 @@ const GAP_SIZE = 2; // Separação entre os blocos
 canvas.width = COLS * (BLOCK_SIZE + GAP_SIZE) - GAP_SIZE;
 canvas.height = ROWS * (BLOCK_SIZE + GAP_SIZE) - GAP_SIZE;
 
-const colors = ["red", "blue", "green", "yellow", "purple", "cyan", "orange"];
+const colors = ["violet", "blue", "cyan", "green", "yellow", "orange", "red"];
 
 const tetrominoes = [
   // I
