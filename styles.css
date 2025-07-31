@@ -1,99 +1,310 @@
-/* Estilos base */
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+* {
   margin: 0;
-  background-color: #111;
-  color: white;
-  font-family: Arial, sans-serif;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.icon {
-  background-image: url("imgs/icon.png");
+body {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  font-family: "Press Start 2P", monospace;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  overflow: hidden;
+  padding: 10px;
 }
 
-.container {
+.game-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 15px;
+  padding: 10px;
+  height: 100vh;
+  justify-content: center;
+  max-width: 100%;
+  max-height: 100%;
 }
 
-.header {
+.game-header {
   display: flex;
   align-items: center;
+  gap: 20px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.game-header h1 {
+  font-size: clamp(1.2rem, 4vw, 2rem);
+  color: #9c27b0;
+  text-shadow: 2px 2px 0px #3b4cca;
+}
+
+.info-icon {
+  font-size: 1.5rem;
+  color: #9c27b0;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.info-icon:hover {
+  transform: scale(1.2);
+}
+
+.info-popup {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.9);
+  border: 2px solid #9c27b0;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 1000;
+  font-size: 0.7rem;
+  line-height: 1.5;
+  text-align: left;
+  max-width: 250px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.info-popup.hidden {
+  display: none;
+}
+
+.info-popup h3 {
+  color: #9c27b0;
   margin-bottom: 10px;
 }
 
-.header h1 {
-  margin-right: 20px;
-  font-size: 20px;
+.game-board {
+  display: flex;
+  gap: min(20px, 2vw);
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-#pauseButton,
-#restartButton {
-  font-size: 14px;
-  padding: 4px 8px;
-  border: none;
-  background-color: #444;
-  color: white;
-  cursor: pointer;
-  margin-left: 10px;
+#gameCanvas {
+  border: 3px solid #9c27b0;
+  background: #0f0f1e;
+  box-shadow: 0 0 20px rgba(156, 39, 176, 0.5);
+  width: min(300px, 80vw);
+  height: min(600px, 80vh);
+  max-width: 100%;
+  max-height: 100%;
+  aspect-ratio: 1 / 2;
 }
 
-#pauseButton:hover,
-#restartButton:hover {
-  background-color: #666;
+.side-panel {
+  display: flex;
+  flex-direction: column;
+  gap: min(20px, 2vh);
+  min-width: 150px;
 }
 
-canvas {
-  border: 2px solid #fff;
-  width: auto;
-  height: 500px;
+.next-piece {
+  background: rgba(0, 0, 0, 0.5);
+  padding: min(15px, 2vw);
+  border: 2px solid #3b4cca;
+  border-radius: 10px;
+  width: min(150px, 90%);
 }
 
-#scoreContainer {
+.next-piece h3 {
+  color: #9c27b0;
+  margin-bottom: 10px;
+  font-size: clamp(0.7rem, 2vw, 0.9rem);
+}
+
+#nextCanvas {
+  background: #0f0f1e;
+  border: 1px solid #3b4cca;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+}
+
+.score-display {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.score-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 10px;
+  gap: 5px;
 }
 
-#scoreContainer p {
-  margin: 0;
+.score-item span:first-child {
+  font-size: clamp(0.6rem, 1.5vw, 0.7rem);
+  color: #ccc;
 }
 
-/* Botões de controle para dispositivos móveis */
-#mobileControls {
-  display: none; /* Inicialmente escondido */
-  margin-top: 10px;
+.score-item span:last-child {
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  color: #9c27b0;
 }
 
-#mobileControls button {
-  font-size: 24px;
-  padding: 10px;
-  margin: 5px;
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.poke-btn {
+  background: linear-gradient(135deg, #9c27b0, #6a1b9a);
   border: none;
-  background-color: #444;
-  color: white;
+  padding: clamp(10px, 2vw, 12px) clamp(15px, 3vw, 25px);
+  font-family: "Press Start 2P", monospace;
+  font-size: clamp(0.6rem, 1.5vw, 0.7rem);
+  color: #fff;
   cursor: pointer;
-  border-radius: 5px;
+  transition: all 0.3s;
+  box-shadow: 0 3px 0 #3b4cca;
 }
 
-#mobileControls button:hover {
-  background-color: #666;
+.poke-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 0 #3b4cca;
 }
 
-/* Tornar responsivo para telas menores */
+.poke-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 0 #3b4cca;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: linear-gradient(135deg, #3b4cca, #1a1a2e);
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  border: 3px solid #9c27b0;
+}
+
+.modal-content h2 {
+  color: #9c27b0;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.modal-content p {
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+#rankingList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.6rem;
+}
+
+.ranking-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  border-bottom: 1px solid rgba(255, 203, 5, 0.3);
+}
+
+.ranking-item:last-child {
+  border-bottom: none;
+}
+
+.ranking-rank {
+  color: #ffcb05;
+  margin-right: 10px;
+}
+
+.ranking-score {
+  color: #fff;
+  font-weight: bold;
+}
+
 @media (max-width: 768px) {
-  canvas {
-    height: 400px; /* Reduz o tamanho do canvas em telas menores */
+  .game-container {
+    padding: 5px;
   }
 
-  #mobileControls {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  .game-header h1 {
+    font-size: clamp(1rem, 5vw, 1.5rem);
+  }
+
+  .game-board {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .side-panel {
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .next-piece {
+    padding: 10px;
+    min-width: 100px;
+  }
+
+  .controls {
+    flex-direction: row;
+    margin-top: 0;
+    gap: 10px;
+  }
+
+  .poke-btn {
+    padding: 8px 15px;
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 5px;
+  }
+
+  .game-container {
+    gap: 10px;
+  }
+
+  .side-panel {
+    flex-direction: column;
+    gap: 10px;
+    width: min(300px, 90vw);
+  }
+
+  .next-piece {
+    width: 100%;
+  }
+
+  .next-piece h3 {
+    font-size: 0.7rem;
   }
 }

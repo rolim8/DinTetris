@@ -1,31 +1,81 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tetris</title>
+    <title>Din Tetris</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="shortcut icon" href="imgs/icon.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="assets/icon/din_tetris_favicon.ico"
+    />
   </head>
   <body>
-    <div class="container">
-      <div class="header">
-        <h1>Tetris</h1>
-        <button id="pauseButton">⏸️ Pause</button>
-        <button id="restartButton">🔄 Restart</button>
+    <div class="game-container">
+      <div class="game-header">
+        <h1>Din Tetris</h1>
+        <div style="display: flex; gap: 15px; align-items: center">
+          <div class="info-icon" id="rankingIcon">🏆</div>
+          <div class="info-icon" id="infoIcon">ⓘ</div>
+        </div>
+        <div class="info-popup hidden" id="infoPopup">
+          <h3>Controls</h3>
+          <p>Arrow Keys: Move</p>
+          <p>↑: Rotate</p>
+          <p>↓: Soft Drop</p>
+          <p>Space: Hard Drop</p>
+          <p>P: Play / Pause</p>
+          <p>G: Toggle Ghost</p>
+        </div>
+        <div class="info-popup hidden" id="rankingPopup">
+          <h3>Top Scores</h3>
+          <div id="rankingList">
+            <p>No scores yet!</p>
+          </div>
+        </div>
       </div>
-      <canvas id="gameCanvas"></canvas>
-      <div id="scoreContainer"></div>
-      <div id="mobileControls">
-        <button id="leftButton">⬅️</button>
-        <button id="rightButton">➡️</button>
-        <button id="downButton" onkeypress="descecomtudo()">⬇️</button>
-        <button id="rotateButton">🔄</button>
+
+      <div class="game-board">
+        <canvas id="gameCanvas" width="300" height="600"></canvas>
+        <div class="side-panel">
+          <div class="next-piece">
+            <h3>Next</h3>
+            <canvas id="nextCanvas" width="120" height="120"></canvas>
+          </div>
+          <div class="score-display">
+            <div class="score-item">
+              <span>Score</span>
+              <span id="score">0</span>
+            </div>
+            <div class="score-item">
+              <span>Lines</span>
+              <span id="lines">0</span>
+            </div>
+            <div class="score-item">
+              <span>Level</span>
+              <span id="level">1</span>
+            </div>
+          </div>
+          <div class="controls">
+            <button id="playPauseBtn" class="poke-btn">Play</button>
+            <button id="resetBtn" class="poke-btn">Reset</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="gameOver" class="modal hidden">
+        <div class="modal-content">
+          <h2>Game Over!</h2>
+          <p>Your final score: <span id="finalScore">0</span></p>
+          <button id="restartBtn" class="poke-btn">Restart</button>
+        </div>
       </div>
     </div>
 
-    <script src="scripts/config.js"></script>
-    <script src="scripts/piece.js"></script>
-    <script src="scripts/game.js"></script>
+    <script type="module" src="tetris.js"></script>
   </body>
 </html>
