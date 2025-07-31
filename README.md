@@ -1,44 +1,55 @@
-# DinTetris
+# 🕹️ Din Tetris
 
-DinTetris é uma versão personalizada do clássico jogo Tetris, desenvolvido usando HTML, CSS e JavaScript. O jogo oferece uma experiência de jogo divertida e desafiadora com uma mecânica de pontuação única e um design de interface minimalista.
+Um jogo de Tetris com visual retrô e inspiração em cores do universo Pokémon. Desenvolvido em HTML, CSS e JavaScript puro, com interface responsiva, ranking local e efeitos visuais dinâmicos.
 
-## Funcionalidades
+👉 **Jogue agora:** [https://rolim8.github.io/Din-Tetris/](https://rolim8.github.io/Din-Tetris/)
 
-- **Interface Simples:** O jogo possui uma interface limpa com controles intuitivos.
-- **Pontuação Dinâmica:** Ganhe 25 pontos para cada peça que cai e um bônus adicional de 100 pontos para cada linha limpa, com um aumento exponencial para múltiplas linhas limpas ao mesmo tempo.
-- **High Score:** O jogo mantém o registro da maior pontuação alcançada.
-- **Modo Pausa:** Pausa e retoma o jogo com um botão simples.
-- **Reinício do Jogo:** Reinicie o jogo a qualquer momento com um botão de reinício.
+---
 
-## Como Jogar
+## 🎮 Funcionalidades
 
-1. **Movimentar Peças:** Use as setas do teclado para mover as peças:
-   - **Seta para a Esquerda:** Move a peça para a esquerda.
-   - **Seta para a Direita:** Move a peça para a direita.
-   - **Seta para Baixo:** Move a peça para baixo mais rapidamente.
-   - **Seta para Cima:** Rotaciona a peça.
+* **Visual Estilo 8-bit:** Interface com fonte retrô e efeitos pixelados.
+* **Pontuação Dinâmica:** Ganhe pontos por movimentos, drops e eliminações.
+* **Ranking Local:** Top 10 pontuações salvas via `localStorage`, com painel de consulta.
+* **Progressão de Nível:** A dificuldade aumenta conforme você avança.
+* **Animações e Feedback Visual:** Texto flutuante ao pontuar e flash ao limpar linhas.
+* **Peças com Cores Temáticas:** Blocos inspirados em paleta de cores Pokémon.
+* **Interface Responsiva:** Jogue em qualquer dispositivo, com adaptação para celulares.
+* **Ghost Piece:** Ative/desative a peça fantasma com a tecla **G**.
 
-2. **Pausar e Retomar:** Clique no botão "⏸️ Pause" para pausar o jogo e "▶️ Resume" para retomar.
+---
 
-3. **Reiniciar o Jogo:** Clique no botão "🔄 Restart" para reiniciar o jogo.
+## ⌨️ Controles
 
-## Tecnologias Utilizadas
+* **← →:** Mover peça para os lados
+* **↑:** Girar peça
+* **↓:** Queda suave
+* **Espaço:** Queda instantânea
+* **P:** Pausar / Continuar
+* **G:** Alternar modo fantasma
 
-- **HTML5:** Estrutura básica e marcação do jogo.
-- **CSS3:** Estilização da interface e layout do jogo.
-- **JavaScript:** Lógica do jogo, manipulação de canvas e controle da pontuação.
+---
 
-## Jogue Agora
+## 📂 Estrutura de Arquivos
 
-Você pode jogar DinTetris diretamente em [Din's Tetris](https://rolim8.github.io/DinTetris/).
+* `index.html`: Estrutura da interface
+* `styles.css`: Estilização visual retrô
+* `tetris.js`: Lógica do jogo e renderização
+* `assets/icon/din_tetris_favicon.ico`: Favicon 8-bit personalizado
 
-## Contribuições
+---
 
-Contribuições são bem-vindas! Se você quiser melhorar o jogo ou corrigir problemas, por favor, faça um fork do repositório e envie um pull request com suas alterações.
+## 🧪 Tecnologias Usadas
 
-## Contato
+* **HTML5**: Marcação e estrutura
+* **CSS3**: Layout responsivo e animações
+* **JavaScript (ES6+)**: Lógica, renderização e interatividade via `Canvas API`
+* **LocalStorage**: Armazenamento local do ranking
 
-Se você tiver alguma dúvida ou sugestão, sinta-se à vontade para entrar em contato:
+---
 
-- **Email:** rolimorlando@gmail.com
-- **GitHub:** [rolim8](https://github.com/rolim8)
+## 📜 Licença
+
+Este projeto é de uso livre.
+Você pode jogar, modificar e compartilhar.
+**(Dê os devidos créditos se achar justo!)**
