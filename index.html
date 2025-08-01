@@ -8,11 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="assets/icon/din_tetris_favicon.ico"
-    />
+    <link rel="icon" type="image/x-icon" href="assets/din_tetris_favicon.ico" />
   </head>
   <body>
     <div class="game-container">
@@ -73,6 +69,28 @@
           <p>Your final score: <span id="finalScore">0</span></p>
           <button id="restartBtn" class="poke-btn">Restart</button>
         </div>
+      </div>
+    </div>
+
+    <!-- Mobile touch controls -->
+    <div class="mobile-controls">
+      <div class="mobile-controls-row">
+        <button class="mobile-btn rotate" id="rotateBtn">↻</button>
+        <button class="mobile-btn drop" id="dropBtn">↓</button>
+      </div>
+      <div class="mobile-controls-row">
+        <button class="mobile-btn" id="leftBtn">←</button>
+        <button class="mobile-btn" id="rightBtn">→</button>
+      </div>
+    </div>
+
+    <!-- New mobile controls layout -->
+    <div class="mobile-controls-new">
+      <div class="mobile-controls-main">
+        <button class="mobile-btn rotate" id="newRotateBtn">↻</button>
+        <button class="mobile-btn" id="newLeftBtn">←</button>
+        <button class="mobile-btn drop" id="newDropBtn">↓</button>
+        <button class="mobile-btn" id="newRightBtn">→</button>
       </div>
     </div>
 
