@@ -2,7 +2,7 @@
 
 Um jogo de Tetris com visual retrô e inspiração em cores do universo Pokémon. Desenvolvido em HTML, CSS e JavaScript puro, com interface responsiva, ranking local e efeitos visuais dinâmicos.
 
-👉 **Jogue agora:** [https://rolim8.github.io/Din-Tetris/](https://rolim8.github.io/Din-Tetris/)
+👉 **Jogue agora:** [https://rolim8.github.io/Din-Tetris/](https://rolim8.github.io/DinTetris/)
 
 ---
 
